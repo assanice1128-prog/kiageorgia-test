@@ -195,6 +195,10 @@
   }
 
   .build-caption { position: absolute; left: 0; right: 0; bottom: 110px; z-index: 3; }
+  @media (max-width: 700px) {
+    .build-caption { bottom: auto; top: 330px; }
+    .build-caption .cap { bottom: auto; top: 0; }
+  }
   .build-caption .cap { position: absolute; left: 0; right: 0; bottom: 0; }
   .build-caption h2 { font-size: clamp(1.8rem, 4vw, 3rem); opacity: 0; transform: translateY(16px); transition: opacity 0.4s ease, transform 0.4s ease; }
   .build-caption h2.show { opacity: 1; transform: translateY(0); }
@@ -434,7 +438,9 @@
   @media (max-width: 900px) {
     .milestones-layout { flex-direction: column; align-items: stretch; }
     .milestones-layout.has-selection { gap: 32px; }
+    .milestones-card-col { order: 1; }
     .milestones-layout.has-selection .milestones-card-col { width: 100%; min-height: 480px; }
+    .milestones-stepper { order: 2; margin-top: 24px; }
     .history-card { grid-template-columns: 1fr; }
   }
 

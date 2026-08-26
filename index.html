@@ -381,6 +381,9 @@
     .orbit-card { width: 60px; height: 60px; margin-left: -30px; margin-top: -30px; padding: 5px 4px; gap: 2px; }
     .orbit-card .idx { font-size: 0.5rem; }
     .orbit-card .lbl { font-size: 0.44rem; }
+    .orbit-layout.has-selection .orbit-card { width: 44px; height: 44px; margin-left: -22px; margin-top: -22px; padding: 3px 2px; }
+    .orbit-layout.has-selection .orbit-card .idx { font-size: 0.42rem; }
+    .orbit-layout.has-selection .orbit-card .lbl { font-size: 0.4rem; }
     .orbit-layout { flex-direction: column; }
     .orbit-detail { max-height: 0; transition: opacity 0.35s ease; }
     .orbit-layout.has-selection .orbit-detail { width: 100%; flex-direction: column; align-items: stretch; gap: 16px; max-height: none; padding: 0 36px; }
@@ -1299,7 +1302,7 @@
     function currentOrbitRadius() {
       var selected = orbitLayout.classList.contains("has-selection");
       var narrow = window.innerWidth <= 520;
-      var cardHalf = narrow ? 30 : (selected ? 39 : 46);
+      var cardHalf = narrow ? (selected ? 22 : 30) : (selected ? 39 : 46);
       return Math.max(50, orbitStage.offsetWidth / 2 - cardHalf - 8);
     }
 

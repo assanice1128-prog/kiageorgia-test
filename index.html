@@ -185,7 +185,7 @@
   .station-rail .st.active { color: var(--ink); border-color: var(--red); }
   .station-rail .st .n { color: var(--red); margin-right: 6px; }
   @media (max-width: 700px) {
-    .station-rail { top: 90px; }
+    .station-rail { top: 115px; }
     .station-rail .wrap { gap: 12px; }
     .station-rail .st { font-size: 0.56rem; padding-bottom: 7px; }
   }
@@ -196,7 +196,7 @@
 
   .build-caption { position: absolute; left: 0; right: 0; bottom: 110px; z-index: 3; }
   @media (max-width: 700px) {
-    .build-caption { bottom: auto; top: 330px; }
+    .build-caption { bottom: auto; top: 365px; }
     .build-caption .cap { bottom: auto; top: 0; }
   }
   .build-caption .cap { position: absolute; left: 0; right: 0; bottom: 0; }
@@ -363,7 +363,8 @@
     .orbit-card .idx { font-size: 0.5rem; }
     .orbit-card .lbl { font-size: 0.44rem; }
     .orbit-layout { flex-direction: column; }
-    .orbit-layout.has-selection .orbit-detail { width: 100%; flex-direction: column; align-items: stretch; gap: 16px; }
+    .orbit-detail { max-height: 0; }
+    .orbit-layout.has-selection .orbit-detail { width: 100%; flex-direction: column; align-items: stretch; gap: 16px; max-height: none; }
     .orbit-detail-media { flex: 0 0 auto; width: 100%; }
     .orbit-detail-copy { min-width: 0; }
     .orbit-layout.has-selection .orbit-stage { width: 260px; height: 260px; max-width: 78vw; max-height: 78vw; }

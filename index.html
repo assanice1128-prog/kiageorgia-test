@@ -318,7 +318,7 @@
   .orbit-detail-copy p { font-size: 0.88rem; margin-top: 12px; overflow-wrap: break-word; }
 
   .orbit-stage {
-    position: relative; width: 560px; height: 560px; max-width: 90vw; max-height: 90vw; aspect-ratio: 1; flex-shrink: 0;
+    position: relative; width: 560px; height: 560px; max-width: 90vw; max-height: 90vw; flex-shrink: 0;
   }
   .orbit-layout.has-selection .orbit-stage { width: 380px; height: 380px; max-width: 34vw; max-height: 34vw; flex-shrink: 1; }
   .orbit-ring {
@@ -438,9 +438,10 @@
   @media (max-width: 900px) {
     .milestones-layout { flex-direction: column; align-items: stretch; }
     .milestones-layout.has-selection { gap: 32px; }
-    .milestones-card-col { order: 1; }
+    .milestones-card-col { order: 1; min-height: 0; }
     .milestones-layout.has-selection .milestones-card-col { width: 100%; min-height: 480px; }
-    .milestones-stepper { order: 2; margin-top: 24px; }
+    .milestones-stepper { order: 2; margin-top: 0; }
+    .milestones-layout.has-selection .milestones-stepper { margin-top: 24px; }
     .history-card { grid-template-columns: 1fr; }
   }
 
